@@ -15,15 +15,15 @@ test("checkValue Should be falsy when argument is undefined", () => {
 });
 
 // test niet laten slagen:
-test("checkValue Should be falsy when argument is undefined", () => {
-  expect(functions.checkValue()).toBeDefined();
-});
+// test("checkValue Should be falsy when argument is undefined", () => {
+//   expect(functions.checkValue()).toBeDefined();
+// });
 // Test Suites 1 failed
 // expect(received).toBeDefined()
 // Received: undefined
 
 test("User should be Brad Traversy object", () => {
-  expect(functions.createUser()).toMatchObject({
+  expect(functions.createUser()).toEqual({
     firstName: "Brad",
     lastName: "Traversy",
   });
@@ -37,13 +37,13 @@ test("Should be under or equal to 1600", () => {
   const load1 = 800;
   const load2 = 800;
   // expect(load1 + load2).toBe.....
-  expect(load1 + load2).toBe(1600);
+  expect(load1 + load2).toBeLessThanOrEqual(1600);
 });
 
 // Regex
 test("There is no I in team", () => {
   //  expect('team').not.to..........;
-  expect("team").not.toMatch(/grapefruit/);
+  expect("team").not.toMatch(/I/);
 });
 
 // Arrays
