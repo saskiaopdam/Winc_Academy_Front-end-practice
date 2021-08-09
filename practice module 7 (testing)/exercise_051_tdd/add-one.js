@@ -1,6 +1,6 @@
 const addOne = function (numbers) {
   // Schrijf hier de functie...
-  return numbers.map((x) => x + 1);
+  return numbers.map((number) => number + 1);
 };
 
 module.exports = addOne;
