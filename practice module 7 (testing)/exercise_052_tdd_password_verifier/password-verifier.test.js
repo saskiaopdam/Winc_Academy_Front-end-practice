@@ -6,7 +6,7 @@ const {
   hasLowerCaseCharacter,
   hasDigit,
   minimumConditionsReached,
-} = require("./password-verifier.js"); // verifyPassword is not defined
+} = require("./password-verifier.js");
 
 // Testen voor utility functions
 

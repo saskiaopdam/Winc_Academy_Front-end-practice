@@ -1,20 +1,22 @@
 // Utility functions
 
-// 1. password is korter dan 9 karakters
 const hasRightLength = (string) => string.length < 9;
-// 2. password is niet null
+// winc: && isNotNull(string);
+// const hasRightLength = (string) => string.length < 9 && isNotNull(string);
+
+// cannot read property length of null
+
 const isNotNull = (string) => string !== null;
-// 3. password heeft 1 of meer uppercase karakters
-const hasUpperCaseCharacter = (string) => /[A-Z]/.test(string);
-// 4. password heeft 1 of meer lowercase karakters
-const hasLowerCaseCharacter = (string) => /[a-z]/.test(string);
-// 5. password heeft 1 of meer cijfers
+
+const hasUpperCaseCharacter = (string) => /[A-Z]/.test(string); // winc: && isNotNull(string);
+
+const hasLowerCaseCharacter = (string) => /[a-z]/.test(string); // winc: && isNotNull(string);
+
 const hasDigit = (string) => /[0-9]/.test(string);
 // const hasDigit = (string) => /\d/.test(string);
 
-// 6. ten minste 3 van deze condities zijn true
 const minimumConditionsReached = (conditions) => {
-  //   const trueConditions = conditions.filter((bool) => bool);
+  // const trueConditions = conditions.filter((bool) => bool);
   const trueConditions = conditions.filter(Boolean);
   //.filter(Boolean) removes values from a list which are falsey
   return trueConditions.length >= 3;
